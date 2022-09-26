@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  scan:
+    docker:
+      - image: owasp/zap2docker-stable
+    steps:
+      - run:
+            command: |
+              mkdir /zap/wrk
+              zap-baseline.py -t "https://gitlab.cloudifyops.com/" -g gen.conf -I -r testreport.html  
+      - store_artifacts:
+          path: /zap/wrk
+          destination: zap-report
