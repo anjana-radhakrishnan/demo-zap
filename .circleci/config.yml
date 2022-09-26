@@ -11,8 +11,9 @@ jobs:
       - store_artifacts:
           path: /zap/wrk
           destination: zap-report
-  workflows:
+          
+ workflows:
    scan-workflow:
-     jobs:
+      jobs:
        - scan
 
