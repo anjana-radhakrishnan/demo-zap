@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  email: cinotify/email@1.2.1
 jobs:
   scan:
     docker:
@@ -13,5 +11,8 @@ jobs:
       - store_artifacts:
           path: /zap/wrk
           destination: zap-report
-          
+  workflows:
+   scan-workflow:
+     jobs:
+       - scan
 
