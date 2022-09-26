@@ -14,13 +14,4 @@ jobs:
           path: /zap/wrk
           destination: zap-report
           
-workflows:
-  scan-workflow:
-    jobs:
-      - scan
-  example-workflow:
-    jobs:
-      - email/send:
-          body: 'Configure this notification at https://www.cinotify.cc/'
-          subject: CircleCI job succeeded
-          to: anjana.r@cloudifyops.com
+
