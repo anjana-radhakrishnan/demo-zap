@@ -14,5 +14,5 @@ jobs:
           
 workflows:
   scan-workflow:
-  jobs:
-    - scan
+    jobs:
+      - scan
