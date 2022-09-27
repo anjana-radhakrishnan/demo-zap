@@ -19,6 +19,8 @@ workflows:
     jobs:
       - scan
       - email/send:
-          body: 'Configure this notification at https://www.cinotify.cc/'
-          subject: CircleCI Job Succeeded
+          requires:
+            - scan
+          body: 'Zap Scan is completed - please check the results'
+          subject: CircleCI Job Finished
           to: anjana.r@cloudifyops.com
