@@ -20,5 +20,5 @@ workflows:
       - scan
       - email/send:
           body: 'Configure this notification at https://www.cinotify.cc/'
-          subject: CircleCI job Succeeded
+          subject: CircleCI Job Succeeded
           to: anjana.r@cloudifyops.com
