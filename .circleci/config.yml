@@ -7,7 +7,7 @@ jobs:
       - run:
             command: |
               mkdir /zap/wrk
-              zap-api-scan.py -t "https://gitlab.cloudifyops.com/api/v4/projects/314" -f openapi --hook=/zap/auth_hook.py -z "auth.api=KAzsZwr5Ubvx_qzCJqYx" -g gen.conf -I -r testreport.html
+             zap-baseline.py -t "https://gitlab.cloudifyops.com/" -g gen.conf -I -r testreport.html --hook=/zap/auth_hook.py -z "auth.loginurl=https://gitlab.cloudifyops.com/users/sign_in auth.username_field="mail id" auth.username="example@gmail.com" auth.password="password""
       - store_artifacts:
           path: /zap/wrk
           destination: zap-report
