@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  email: cinotify/email@1.2.3
 jobs:
   scan:
     docker:
@@ -16,3 +18,7 @@ workflows:
   scan-workflow:
     jobs:
       - scan
+      - email/send:
+          body: 'Configure this notification at https://www.cinotify.cc/'
+          subject: CircleCI job succeeded
+          to: anjana.r@cloudifyops.com
