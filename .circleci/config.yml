@@ -23,4 +23,5 @@ workflows:
             - scan
           body: 'Zap Scan is completed - please check the results'
           subject: CircleCI Job Finished
+          attachments: testreport.html
           to: anjana.r@cloudifyops.com
