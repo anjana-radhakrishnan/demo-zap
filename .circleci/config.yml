@@ -22,5 +22,5 @@ workflows:
           requires:
             - scan
           body: 'Zap Scan is completed - Please check the results'
-          subject: CIRCLECI Job Fibished
+          subject: CIRCLECI Job Finished
           to: anjana.r@cloudifyops.com
