@@ -20,8 +20,8 @@ workflows:
       - scan
       - email/send:
           requires:
-            - scan
-          from: anjanaradhakrish@gmail.com  
+            - scan 
           body: 'Zap Scan is completed - Please check the results'
+          from: anjana.r@cloudifyops.com 
           subject: CIRCLECI job Finished
-          to: anjana.r@cloudifyops.com
+          to: anjanaradhakrish@gmail.com
